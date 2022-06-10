@@ -42,14 +42,11 @@ const nameVal = (min, max) => {
 
 // Validating Stall Number field.
 const stVal = () => {
-  console.log("In stVal");
   let stall = document.new_vendor.stall_num;
-  console.log(stall);
   let xters = /^[A-Z0-9]+$/;
   let staLen = stall.value.length;
   console.log(staLen);
   if (staLen > 2 && stall.value.match(xters)) {
-    console.log("true");
     return true;
   } else {
     stall.style.border = "2px solid red";
