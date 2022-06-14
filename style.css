@@ -1,12 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900);
+
 .container {
-    padding: 20px;
+    padding: 10px;
 }
 body {
-    background-color: hsl(233, 47%, 7%);
-    color: hsl(0, 0%, 100%);
+    background-color: #ffd8be;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    font-family: 'Outfit', sans-serif;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
 }
 #top-cont {
-    background-color: hsl(244, 38%, 16%);
+    background-color: #f8f7ff;
     border-radius: 10px;
 }
 h1 {
@@ -15,5 +25,22 @@ h1 {
 
 input {
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+.btn-primary {
+    background-color: #32161f;
+    border-color: #32161f;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.btn-primary:hover {
+    background-color: #4E3C3B;
+    border-color: #4E3C3B;
+}
+span {
+    color: red;
+}
+.footer {
+    margin-top: 10px;
+    text-align: center;
 }

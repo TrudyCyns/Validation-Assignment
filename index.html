@@ -16,62 +16,97 @@
 </head>
 
 <body class="container" onload="firstFocus()">
-    <div class="col-md-8 col-lg-6 container" id="top-cont">
+    <div class="col col-md-10 container" id="top-cont">
         <h1>New Vendor</h1>
         <hr>
-        <form name="new_vendor">
-            <div class="mb-3" id="name_field">
-                <label for="fullname" class="form-label">Full Name</label>
-                <input type="text" class="form-control" name="fullname" onblur="nameVal(5,20)"  required>
-            </div>
-            <div class="mb-3" id="stall_field">
-                <label for="stall_num" class="form-label">Stall Number</label>
-                <input type="text" class="form-control" name="stall_num" onblur="stVal()">
-            </div>
-            <div class="mb-3" id="goods_field">
-                <label for="goods" class="form-label">Type of Goods</label>
-                <select class="form-select mb-3" name="goods" aria-label=".form-select-lg example" onblur="gdVal()">
-                    <option value="default" selected>Choose an option.</option>
-                    <option value="1">Health and Fitness</option>
-                    <option value="2">Food</option>
-                    <option value="3">Electronic Appliances</option>
-                    <option value="4">Services</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="goods" class="form-label">Scale of Sale</label><br>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Retail
-                    </label>
+        <form name="newvendor">
+            <div class="row">
+                <div class="mb-3 col-md-6" id="fname_field">
+                    <input type="text" class="form-control" name="firstname" placeholder="First Name"
+                        onblur="fNameVal(3,12)" required>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                    <label class="form-check-label" for="flexCheckChecked">
-                        Wholesale
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                    <label class="form-check-label" for="flexCheckChecked">
-                        Hybrid
-                    </label>
+                <div class="mb-3 col-md-6" id="lname_field">
+                    <input type="text" class="form-control" name="lastname" placeholder="Last Name"
+                        onblur="lNameVal(3,12)" required>
                 </div>
             </div>
-            <div class="mb-3" id="mont_rent">
-                <label for="mon_rent" class="form-label">Monthly Rent (UGX)</label>
-                <input type="text" class="form-control" name="mon_rent" onblur="mRent()" required>
+
+            <div class="row">
+                <div class="mb-3 col-6 col-md-4" id="stall_field">
+                    <input type="text" class="form-control" name="stallnum" onblur="stVal()" placeholder="Stall Number">
+                </div>
+
+                <div class="mb-3 col-6 col-md-8" id="telnofield">
+                    <input type="tel" class="form-control" name="telnum" placeholder="Tel. Number" onblur="telNoVal()">
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div class="row">
+                <div class="mb-1 col-md-6" id="goods_field">
+                    <label for="goods" class="form-label">Type of Goods</label>
+                    <select class="form-select mb-3" name="goods" aria-label=".form-select-lg example" onblur="gdVal()">
+                        <option value="default" selected>Choose an option.</option>
+                        <option value="1">Health and Fitness</option>
+                        <option value="2">Food</option>
+                        <option value="3">Electronic Appliances</option>
+                        <option value="4">Services</option>
+                    </select>
+                </div>
+
+                <div class="mb-1 col-md-6" id="datefield">
+                    <label for="dateval" class="form-label">Entry Date</label>
+                    <input type="date" class="form-control" name="dateval">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 mt-2 col-md-7 col-lg-6">
+                    <label for="goods" class="form-label">Scale of Sale</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Retail
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Wholesale
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Hybrid
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-3 col-md-5 col-lg-6" id="mont_rent">
+                    <label for="mon_rent">Monthly Rent</label>
+                    <input type="text" class="form-control" name="mon_rent" placeholder="Monthly Rent (UGX)"
+                        onblur="mRent()" required>
+                </div>
+            </div>
+
+            <div class="mb-3" id="moreinfo">
+                <textarea class="col-12" rows="3" placeholder="Additional Business Information" name="bizinfo"
+                    onblur="infoVal()"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 rounded-pill">Submit</button>
         </form>
+
+        
     </div>
-    
+    <div class="footer">
+        &copy 2022 | Gertrude
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
-
 </body>
 
 </html>
