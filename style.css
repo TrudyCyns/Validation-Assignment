@@ -44,3 +44,9 @@ span {
     margin-top: 10px;
     text-align: center;
 }
+
+@media (min-width: 768px) {
+    #top-cont {
+        margin-top: 50px;
+    }
+}
