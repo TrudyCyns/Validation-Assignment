@@ -4,7 +4,12 @@
     padding: 10px;
 }
 body {
-    background-color: #ffd8be;
+    background: hsla(24, 100%, 87%, 1);
+
+background: radial-gradient(circle, hsla(24, 100%, 87%, 1) 0%, hsla(192, 17%, 94%, 1) 76%);
+
+
+
     color: black;
     display: flex;
     flex-direction: column;
